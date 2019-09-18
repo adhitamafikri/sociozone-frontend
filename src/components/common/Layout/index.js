@@ -1,13 +1,12 @@
 import React from 'react'
-import { Pane, Heading } from 'evergreen-ui'
+import { Pane } from 'evergreen-ui'
 
-function Layout({ children }) {
+function Layout({ children, header, navigation }) {
   return (
     <Pane>
-      <Pane background="redTint" padding={16}>
-        <Heading>Sociozone</Heading>
-      </Pane>
+      {header && header.component}
       <Pane width="100%">{children}</Pane>
+      {navigation && navigation.component}
     </Pane>
   )
 }
