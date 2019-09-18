@@ -1,4 +1,4 @@
-import Home from '../pages/Home'
+import Welcome from '../pages/Welcome'
 import Login from '../pages/Login'
 import Register from '../pages/Register'
 
@@ -6,7 +6,7 @@ export default [
   {
     path: '/',
     exact: true,
-    component: Home,
+    component: Welcome,
   },
   {
     path: '/login',

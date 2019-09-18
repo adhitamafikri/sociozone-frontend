@@ -6,7 +6,7 @@ import Layout from 'components/common/Layout'
 import Header from 'components/common/Header'
 import Navigation from 'components/common/Navigation'
 
-function Home() {
+function Welcome() {
   return (
     <Layout
       header={{
@@ -43,4 +43,4 @@ function Home() {
   )
 }
 
-export default Home
+export default Welcome
