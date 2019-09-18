@@ -1,7 +1,7 @@
 import React from 'react'
 import { Pane, Heading } from 'evergreen-ui'
 
-const Layout = ({ children }) => {
+function Layout({ children }) {
   return (
     <Pane>
       <Pane background="redTint" padding={16}>

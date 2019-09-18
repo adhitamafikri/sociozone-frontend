@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { Pane, Heading, Button } from 'evergreen-ui'
 
-import Layout from '../../components/common/Layout'
+import Layout from 'components/common/Layout'
 
 const Home = () => {
 	return (
