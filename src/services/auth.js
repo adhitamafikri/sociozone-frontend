@@ -11,6 +11,7 @@ export const postLogin = (params) => {
 // Registration
 export const postRegistration = (params) => {
   console.log('Posting Registration!', params)
+  console.log(`${API_URL}/register`);
   axios.post(`${API_URL}/register`, params)
     .then(response => console.log(response))
     .catch(err => console.log(err))
