@@ -19,6 +19,15 @@ module.exports = {
         "react"
     ],
     "rules": {
-      "semi": ["error", "never"]
-    }
+      "semi": ["error", "never"],
+      "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
+    },
+    "settings": {
+      "import/resolver": {
+        "node": {
+          "paths": ["src"],
+          "extensions": [".js", ".jsx", ".ts", ".tsx"]
+        }
+      }
+    },
 };
