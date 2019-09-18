@@ -1,5 +1,12 @@
 import React from 'react'
 
+import {
+  Pane,
+  Heading,
+  TextInput,
+  Button,
+} from 'evergreen-ui'
+
 import Layout from 'components/common/Layout'
 import Header from 'components/common/Header'
 import Navigation from 'components/common/Navigation'
@@ -25,27 +32,46 @@ function Login() {
         component: <Navigation />,
       }}
     >
-      Sociozone Login
-      <form method="POST" onSubmit={handleFormSubmit} autoComplete="off">
-        <label htmlFor="uname">Username</label>
-        <input
-          type="text"
-          placeholder="username"
-          name="username"
-          id="uname"
-          onChange={(e) => setUsername(e.target.value)}
-        />
-        <label htmlFor="pwd">Password</label>
-        <input
-          type="password"
-          placeholder="username"
-          name="password"
-          id="pwd"
-          onChange={(e) => setPassword(e.target.value)}
-        />
+      <Heading is="h1">Sociozone Login</Heading>
 
-        <input type="submit" value="Submit" />
-      </form>
+      <Pane>
+        <form method="POST" onSubmit={handleFormSubmit} autoComplete="off">
+          <Pane marginTop={16} marginBottom={16}>
+            <label htmlFor="uname">Username</label>
+            <TextInput
+              width="100%"
+              marginTop={8}
+              type="text"
+              placeholder="username"
+              name="username"
+              id="uname"
+              onChange={(e) => setUsername(e.target.value)}
+            />
+          </Pane>
+
+          <Pane marginTop={16} marginBottom={16}>
+            <label htmlFor="pwd">Password</label>
+            <TextInput
+              width="100%"
+              marginTop={8}
+              type="password"
+              placeholder="username"
+              name="password"
+              id="pwd"
+              onChange={(e) => setPassword(e.target.value)}
+            />
+          </Pane>
+
+          <Button
+            appearance="primary"
+            width="100%"
+            type="submit"
+            justifyContent="center"
+          >
+            Submit
+          </Button>
+        </form>
+      </Pane>
     </Layout>
   )
 }
