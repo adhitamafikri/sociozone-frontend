@@ -1,59 +1,89 @@
 import React from 'react'
-import Flex from '../../components/common/Flex'
+import {
+  Pane,
+  Heading,
+  TextInput,
+  Button,
+} from 'evergreen-ui'
 
-import { postRegistration } from '../../services/auth'
+import Layout from 'components/common/Layout'
+import Header from 'components/common/Header'
+import Navigation from 'components/common/Navigation'
+
+import { postRegistration } from 'services/auth'
 
 function Register() {
   const [name, setName] = React.useState('')
   const [username, setUsername] = React.useState('')
   const [password, setPassword] = React.useState('')
 
-  const handleFormSubmit = e => {
+  const handleFormSubmit = (e) => {
     e.preventDefault()
     console.log('submitting form', username, password)
     postRegistration({ name, username, password })
   }
 
   return (
-    <div>
-      Sociozone Login
-      <form method="POST" onSubmit={handleFormSubmit} autoComplete="off">
-        <Flex direction="column">
-          <Flex>
-            <label htmlFor="fulluname">Name</label>
-            <input
-              type="text"
-              placeholder="Name"
-              name="name"
-              id="fullname"
-              onChange={e => setName(e.target.value)}
-            />
-          </Flex>
-          <Flex>
-            <label htmlFor="uname">Username</label>
-            <input
-              type="text"
-              placeholder="username"
-              name="username"
-              id="uname"
-              onChange={e => setUsername(e.target.value)}
-            />
-          </Flex>
-          <Flex>
-            <label htmlFor="pwd">Password</label>
-            <input
-              type="password"
-              placeholder="username"
-              name="password"
-              id="pwd"
-              onChange={e => setPassword(e.target.value)}
-            />
-          </Flex>
-        </Flex>
+    <Layout
+      header={{
+        component: <Header />,
+      }}
+      navigation={{
+        component: <Navigation />,
+      }}
+    >
+      <Heading is="h1">Sociozone Registration</Heading>
 
-        <input type="submit" value="Submit" />
+      <form method="POST" onSubmit={handleFormSubmit} autoComplete="off">
+        <Pane marginTop={16} marginBottom={16}>
+          <label htmlFor="fulluname">Name</label>
+          <TextInput
+            width="100%"
+            marginTop={8}
+            type="text"
+            placeholder="Name"
+            name="name"
+            id="fullname"
+            onChange={(e) => setName(e.target.value)}
+          />
+        </Pane>
+        <Pane marginTop={16} marginBottom={16}>
+          <label htmlFor="uname">Username</label>
+          <TextInput
+            width="100%"
+            marginTop={8}
+            type="text"
+            placeholder="username"
+            name="username"
+            id="uname"
+            onChange={(e) => setUsername(e.target.value)}
+          />
+        </Pane>
+        <Pane marginTop={16} marginBottom={16}>
+          <label htmlFor="pwd">Password</label>
+          <TextInput
+            width="100%"
+            marginTop={8}
+            type="password"
+            placeholder="username"
+            name="password"
+            id="pwd"
+            onChange={(e) => setPassword(e.target.value)}
+          />
+        </Pane>
+
+        <Button
+          appearance="primary"
+          intent="success"
+          type="submit"
+          width="100%"
+          justifyContent="center"
+          marginBottom={16}
+        >
+          Register
+        </Button>
       </form>
-    </div>
+    </Layout>
   )
 }
 

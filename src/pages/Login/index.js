@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { Link } from 'react-router-dom'
 import {
   Pane,
   Heading,
@@ -64,13 +64,20 @@ function Login() {
 
           <Button
             appearance="primary"
+            intent="success"
             width="100%"
             type="submit"
             justifyContent="center"
+            marginBottom={16}
           >
             Submit
           </Button>
         </form>
+        <Link to="/register">
+          <Button width="100%" justifyContent="center">
+            Register
+          </Button>
+        </Link>
       </Pane>
     </Layout>
   )
