@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import {
   Pane,
   Heading,
@@ -83,6 +84,12 @@ function Register() {
           Register
         </Button>
       </form>
+
+      <Link to="/login">
+        <Button width="100%" justifyContent="center">
+          Login
+        </Button>
+      </Link>
     </Layout>
   )
 }

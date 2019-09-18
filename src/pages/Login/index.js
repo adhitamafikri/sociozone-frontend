@@ -73,6 +73,7 @@ function Login() {
             Submit
           </Button>
         </form>
+        
         <Link to="/register">
           <Button width="100%" justifyContent="center">
             Register
