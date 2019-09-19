@@ -2,6 +2,8 @@ import Welcome from 'pages/Welcome'
 import Login from 'pages/Login'
 import Register from 'pages/Register'
 import Home from 'pages/Home'
+import Search from 'pages/Search'
+import Profile from 'pages/Profile'
 
 export default [
   {
@@ -23,5 +25,15 @@ export default [
     path: '/home',
     exact: true,
     component: Home,
+  },
+  {
+    path: '/search',
+    exact: true,
+    component: Search,
+  },
+  {
+    path: '/profile',
+    exact: true,
+    component: Profile,
   },
 ]
