@@ -9,7 +9,6 @@ import {
 
 import Layout from 'components/common/Layout'
 import Header from 'components/common/Header'
-import Navigation from 'components/common/Navigation'
 
 import { postRegistration } from 'services/auth'
 
@@ -28,9 +27,6 @@ function Register() {
     <Layout
       header={{
         component: <Header />,
-      }}
-      navigation={{
-        component: <Navigation />,
       }}
     >
       <Heading is="h1">Sociozone Registration</Heading>

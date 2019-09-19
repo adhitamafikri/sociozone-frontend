@@ -2,6 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 import { Pane, Icon } from 'evergreen-ui'
 
+import Link from 'components/common/Link'
+
 const StyledNavigation = styled(Pane)`
   position: fixed;
   bottom: 0;
@@ -18,15 +20,21 @@ function Navigation() {
       display="flex"
       justifyContent="space-around"
     >
-      <Pane>
-        <Icon icon="home" />
-      </Pane>
-      <Pane>
-        <Icon icon="search" />
-      </Pane>
-      <Pane>
-        <Icon icon="person" />
-      </Pane>
+      <Link to="/home">
+        <Pane>
+          <Icon icon="home" />
+        </Pane>
+      </Link>
+      <Link to="/search">
+        <Pane>
+          <Icon icon="search" />
+        </Pane>
+      </Link>
+      <Link to="/profile">
+        <Pane>
+          <Icon icon="person" />
+        </Pane>
+      </Link>
     </StyledNavigation>
   )
 }

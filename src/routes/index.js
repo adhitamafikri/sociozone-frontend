@@ -1,6 +1,7 @@
-import Welcome from '../pages/Welcome'
-import Login from '../pages/Login'
-import Register from '../pages/Register'
+import Welcome from 'pages/Welcome'
+import Login from 'pages/Login'
+import Register from 'pages/Register'
+import Home from 'pages/Home'
 
 export default [
   {
@@ -17,5 +18,10 @@ export default [
     path: '/register',
     exact: true,
     component: Register,
+  },
+  {
+    path: '/home',
+    exact: true,
+    component: Home,
   },
 ]

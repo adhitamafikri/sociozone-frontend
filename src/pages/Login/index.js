@@ -9,7 +9,6 @@ import {
 
 import Layout from 'components/common/Layout'
 import Header from 'components/common/Header'
-import Navigation from 'components/common/Navigation'
 
 import { postLogin } from 'services/auth'
 
@@ -27,9 +26,6 @@ function Login() {
     <Layout
       header={{
         component: <Header />,
-      }}
-      navigation={{
-        component: <Navigation />,
       }}
     >
       <Heading is="h1">Sociozone Login</Heading>
@@ -73,7 +69,7 @@ function Login() {
             Submit
           </Button>
         </form>
-        
+
         <Link to="/register">
           <Button width="100%" justifyContent="center">
             Register
