@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Pane, Heading } from 'evergreen-ui'
+import { Pane, Icon } from 'evergreen-ui'
 
 const StyledNavigation = styled(Pane)`
   position: fixed;
@@ -10,8 +10,23 @@ const StyledNavigation = styled(Pane)`
 
 function Navigation() {
   return (
-    <StyledNavigation background="tealTint" width="100%" padding={16}>
-      <Heading>Navigation</Heading>
+    <StyledNavigation
+      background="redTint"
+      width="100%"
+      height={52}
+      padding={16}
+      display="flex"
+      justifyContent="space-around"
+    >
+      <Pane>
+        <Icon icon="home" />
+      </Pane>
+      <Pane>
+        <Icon icon="search" />
+      </Pane>
+      <Pane>
+        <Icon icon="person" />
+      </Pane>
     </StyledNavigation>
   )
 }
