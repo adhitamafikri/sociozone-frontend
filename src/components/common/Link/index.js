@@ -6,8 +6,8 @@ const StyledLink = styled(RouterLink)`
   color: black;
 `
 
-function Link({ children }) {
-  return <StyledLink>{children}</StyledLink>
+function Link(props) {
+  return <StyledLink to={props.to}>{props.children}</StyledLink>
 }
 
 export default Link
