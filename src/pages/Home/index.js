@@ -1,10 +1,24 @@
 import React from 'react'
-import { Pane, Heading, Button } from 'evergreen-ui'
+import { Pane } from 'evergreen-ui'
 
 import Layout from 'components/common/Layout'
 import Header from 'components/common/Header'
 import Navigation from 'components/common/Navigation'
-import Link from 'components/common/Link'
+
+import PostCard from 'components/PostCard'
+
+import timelineData from '__mocks__/timeline'
+
+function renderTimeline() {
+  return timelineData.map((post) => (
+    <PostCard
+      key={post.id}
+      user={post.user}
+      photos={post.photos}
+      content={post.content}
+    />
+  ))
+}
 
 function Home() {
   return (
@@ -16,7 +30,7 @@ function Home() {
         component: <Navigation />,
       }}
     >
-      <Pane>Home</Pane>
+      {renderTimeline()}
     </Layout>
   )
 }

@@ -8,7 +8,7 @@ function Layout({ children, header, navigation }) {
       {header && header.component}
       <Pane
         width="100%"
-        height="100vh"
+        minHeight="100vh"
         paddingTop={68}
         paddingBottom={paddingBottom}
         paddingLeft={16}
