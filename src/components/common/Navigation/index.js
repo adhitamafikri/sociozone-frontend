@@ -22,17 +22,17 @@ function Navigation() {
     >
       <Link to="/home">
         <Pane>
-          <Icon icon="home" />
+          <Icon icon="home" color="dimgray" />
         </Pane>
       </Link>
       <Link to="/search">
         <Pane>
-          <Icon icon="search" />
+          <Icon icon="search" color="dimgray" />
         </Pane>
       </Link>
       <Link to="/profile">
         <Pane>
-          <Icon icon="person" />
+          <Icon icon="person" color="dimgray" />
         </Pane>
       </Link>
     </StyledNavigation>

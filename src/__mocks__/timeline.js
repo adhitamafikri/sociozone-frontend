@@ -7,7 +7,7 @@ export default [
       profile_url: 'https://www.google.com',
     },
     photos: [
-      'https://i.ibb.co/CHxxP6G/pp-placeholder.png',
+      'https://i.ibb.co/fYrCzmF/Masego.jpg',
     ],
     content: 'quis illum malis elit velit quis quae tempor magna malis amet malis anim culpa eram esse aliqua legam ipsum quae',
   },
@@ -19,8 +19,8 @@ export default [
       profile_url: 'https://www.google.com',
     },
     photos: [
-      'https://i.ibb.co/CHxxP6G/pp-placeholder.png',
-      'https://i.ibb.co/CHxxP6G/pp-placeholder.png',
+      'https://i.ibb.co/fYrCzmF/Masego.jpg',
+      'https://i.ibb.co/fYrCzmF/Masego.jpg',
     ],
     content: 'quis illum malis elit velit quis quae tempor magna malis amet malis anim culpa eram esse aliqua legam ipsum quae',
   },
@@ -32,8 +32,8 @@ export default [
       profile_url: 'https://www.google.com',
     },
     photos: [
-      'https://i.ibb.co/CHxxP6G/pp-placeholder.png',
-      'https://i.ibb.co/CHxxP6G/pp-placeholder.png',
+      'https://i.ibb.co/fYrCzmF/Masego.jpg',
+      'https://i.ibb.co/fYrCzmF/Masego.jpg',
     ],
     content: 'quis illum malis elit velit quis quae tempor magna malis amet malis anim culpa eram esse aliqua legam ipsum quae',
   },
