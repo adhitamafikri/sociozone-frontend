@@ -20,7 +20,11 @@ function Profile() {
         component: <Navigation />,
       }}
     >
-      <Pane>
+      <Pane
+        display="flex"
+        justifyContent="space-between"
+        alignItems="center"
+      >
         <Pane
           width={70}
           height={70}
@@ -31,6 +35,45 @@ function Profile() {
           overflow="hidden"
         >
           <Image src="https://i.ibb.co/tcWVbVP/Jorja-Smith.jpg" width="auto" height="100%" fit="cover" />
+        </Pane>
+        <Pane
+          flex={1}
+          marginLeft={16}
+          display="flex"
+          alignItems="center"
+        >
+          <Pane
+            width="33%"
+            display="flex"
+            flexDirection="column"
+            alignItems="center"
+            margin={4}
+          >
+            <Paragraph fontSize={16} fontWeight={500}>2</Paragraph>
+            <Text fontSize={14} fontWeight={500}>Posts</Text>
+          </Pane>
+          <Pane
+            width="33%"
+            display="flex"
+            flexDirection="column"
+            alignItems="center"
+            margin={4}
+            marginRight={8}
+            marginLeft={8}
+          >
+            <Paragraph fontSize={16} fontWeight={500}>2</Paragraph>
+            <Text fontSize={14} fontWeight={500}>Followers</Text>
+          </Pane>
+          <Pane
+            width="33%"
+            display="flex"
+            flexDirection="column"
+            alignItems="center"
+            margin={4}
+          >
+            <Paragraph fontSize={16} fontWeight={500}>2</Paragraph>
+            <Text fontSize={14} fontWeight={500}>Following</Text>
+          </Pane>
         </Pane>
       </Pane>
       <Pane
