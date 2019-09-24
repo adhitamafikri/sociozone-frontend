@@ -9,6 +9,16 @@ import Navigation from 'components/common/Navigation'
 import Image from 'components/common/Image'
 
 import profileData from '__mocks__/profile'
+import feedsData from '__mocks__/feeds'
+
+function Feeds() {
+  const size = (window.innerWidth / 3) - 16
+  return feedsData.map((feed) => (
+    <Pane key={feed.post_id} width={size} height={size} marginLeft={2.5} marginRight={2.5} marginBottom={8}>
+      <Image src={feed.photos[0]} width={size} height={size} fit="cover" />
+    </Pane>
+  ))
+}
 
 function Profile() {
   return (
@@ -92,6 +102,10 @@ function Profile() {
         <Link href={profileData.website} fontSize={13}>
           {profileData.website}
         </Link>
+      </Pane>
+
+      <Pane marginTop={32} display="flex" flexWrap="wrap">
+        <Feeds />
       </Pane>
     </Layout>
   )
