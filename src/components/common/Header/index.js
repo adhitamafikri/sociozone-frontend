@@ -10,12 +10,9 @@ const StyledHeader = styled(Pane)`
   left: 0;
 `
 
-function Header({ page }) {
+function Header({ urlPath }) {
   const [popupActive, setPopupActive] = React.useState(false)
-  const togglePopupActive = () => {
-    console.log('awowako')
-    setPopupActive(!popupActive)
-  }
+  const togglePopupActive = () => setPopupActive(!popupActive)
 
   return (
     <StyledHeader
@@ -28,8 +25,8 @@ function Header({ page }) {
       alignItems="center"
     >
       <Heading>Sociozone</Heading>
-      {page === 'profile' && <Button onClick={togglePopupActive}>Logout</Button>}
-      {page === 'profile' && <PopupLogout active={popupActive} toggle={togglePopupActive} />}
+      {urlPath === '/profile' && <Button onClick={togglePopupActive}>Logout</Button>}
+      {urlPath === '/profile' && <PopupLogout active={popupActive} toggle={togglePopupActive} />}
     </StyledHeader>
   )
 }

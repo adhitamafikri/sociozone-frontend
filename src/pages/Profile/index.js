@@ -20,11 +20,11 @@ function Feeds() {
   ))
 }
 
-function Profile() {
+function Profile({ match }) {
   return (
     <Layout
       header={{
-        component: <Header page="profile" />,
+        component: <Header urlPath={match.path} />,
       }}
       navigation={{
         component: <Navigation />,
