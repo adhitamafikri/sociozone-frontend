@@ -36,4 +36,9 @@ export default [
     exact: true,
     component: Profile,
   },
+  {
+    path: '/user/:userID',
+    exact: true,
+    component: Profile,
+  },
 ]

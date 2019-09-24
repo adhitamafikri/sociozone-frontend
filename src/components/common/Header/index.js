@@ -2,6 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 import { Pane, Heading, Button } from 'evergreen-ui'
 
+import PopupLogout from 'components/PopupLogout'
+
 const StyledHeader = styled(Pane)`
   position: fixed;
   top: 0;
@@ -9,7 +11,12 @@ const StyledHeader = styled(Pane)`
 `
 
 function Header({ page }) {
-  console.log(page)
+  const [popupActive, setPopupActive] = React.useState(false)
+  const togglePopupActive = () => {
+    console.log('awowako')
+    setPopupActive(!popupActive)
+  }
+
   return (
     <StyledHeader
       background="redTint"
@@ -21,7 +28,8 @@ function Header({ page }) {
       alignItems="center"
     >
       <Heading>Sociozone</Heading>
-      {page === 'profile' && <Button>Logout</Button>}
+      {page === 'profile' && <Button onClick={togglePopupActive}>Logout</Button>}
+      {page === 'profile' && <PopupLogout active={popupActive} toggle={togglePopupActive} />}
     </StyledHeader>
   )
 }
