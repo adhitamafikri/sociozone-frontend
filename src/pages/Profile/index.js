@@ -24,7 +24,7 @@ function Profile() {
   return (
     <Layout
       header={{
-        component: <Header />,
+        component: <Header page="profile" />,
       }}
       navigation={{
         component: <Navigation />,
