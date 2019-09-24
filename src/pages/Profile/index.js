@@ -1,6 +1,6 @@
 import React from 'react'
 import {
-  Pane, Text, Paragraph, Link,
+  Pane, Text, Paragraph, Link, Button
 } from 'evergreen-ui'
 
 import Layout from 'components/common/Layout'
@@ -102,6 +102,18 @@ function Profile({ match }) {
         <Link href={profileData.website} fontSize={13}>
           {profileData.website}
         </Link>
+
+        {match.path === '/user/:userID' && (
+          <Button
+            appearance="primary"
+            width="100%"
+            borderRadius={4}
+            justifyContent="center"
+            marginTop={16}
+          >
+            Follow
+          </Button>
+        )}
       </Pane>
 
       <Pane marginTop={32} display="flex" flexWrap="wrap">

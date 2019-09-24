@@ -58,7 +58,6 @@ function Popup({ toggle }) {
 }
 
 function PopupLogout({ active, toggle }) {
-  console.log('hello form popup')
   return active
     ? ReactDOM.createPortal(<Popup toggle={toggle} />, document.body)
     : null
