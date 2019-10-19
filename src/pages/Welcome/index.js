@@ -1,9 +1,9 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-import { Pane, Heading, Button } from 'evergreen-ui'
+import { Pane, Heading, Button, Text } from 'evergreen-ui'
 
 import Layout from 'components/common/Layout'
 import Header from 'components/common/Header'
+import Link from 'components/common/Link'
 
 function Welcome() {
   return (
@@ -21,6 +21,9 @@ function Welcome() {
         flexDirection="column"
       >
         <Heading>Welcome to Sociozone</Heading>
+        <Text fontStyle="italic" marginTop={8}>
+          {`Can't come up with a better name :'), duh`}
+        </Text>
       </Pane>
       <Pane
         margin={24}
