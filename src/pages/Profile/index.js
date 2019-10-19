@@ -15,9 +15,19 @@ import feedsData from '__mocks__/feeds'
 function Feeds() {
   const size = (window.innerWidth / 3) - 16
   return feedsData.map((feed) => (
-    <Pane key={feed.post_id} width={size} height={size} marginLeft={2.5} marginRight={2.5} marginBottom={8}>
-      <Image src={feed.photos[0]} width={size} height={size} fit="cover" />
-    </Pane>
+    <RouterLink
+      to={{
+        pathname: "profile/post",
+        state: {
+          post: feed,
+        },
+      }}
+      key={feed.post_id}
+    >
+      <Pane width={size} height={size} marginLeft={2.5} marginRight={2.5} marginBottom={8}>
+        <Image src={feed.photos[0]} width={size} height={size} fit="cover" />
+      </Pane>
+    </RouterLink>
   ))
 }
 

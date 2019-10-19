@@ -5,6 +5,7 @@ import Home from 'pages/Home'
 import Search from 'pages/Search'
 import Profile from 'pages/Profile'
 import EditProfile from 'pages/EditProfile'
+import ProfilePost from 'pages/ProfilePost'
 import Upload from 'pages/Upload'
 
 export default [
@@ -47,6 +48,11 @@ export default [
     path: '/profile/edit',
     exact: true,
     component: EditProfile,
+  },
+  {
+    path: '/profile/post',
+    exact: true,
+    component: ProfilePost,
   },
   {
     path: '/user/:userID',
