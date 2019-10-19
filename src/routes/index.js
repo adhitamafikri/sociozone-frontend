@@ -4,6 +4,8 @@ import Register from 'pages/Register'
 import Home from 'pages/Home'
 import Search from 'pages/Search'
 import Profile from 'pages/Profile'
+import EditProfile from 'pages/EditProfile'
+import Upload from 'pages/Upload'
 
 export default [
   {
@@ -32,9 +34,19 @@ export default [
     component: Search,
   },
   {
+    path: '/upload',
+    exact: true,
+    component: Upload,
+  },
+  {
     path: '/profile',
     exact: true,
     component: Profile,
+  },
+  {
+    path: '/profile/edit',
+    exact: true,
+    component: EditProfile,
   },
   {
     path: '/user/:userID',

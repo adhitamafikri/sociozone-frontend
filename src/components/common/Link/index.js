@@ -4,6 +4,7 @@ import { Link as RouterLink } from 'react-router-dom'
 
 const StyledLink = styled(RouterLink)`
   color: black;
+  text-decoration: none;
 `
 
 function Link(props) {

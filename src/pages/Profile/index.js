@@ -1,12 +1,13 @@
 import React from 'react'
 import {
-  Pane, Text, Paragraph, Link, Button
+  Pane, Text, Paragraph, Link, Button,
 } from 'evergreen-ui'
 
 import Layout from 'components/common/Layout'
 import Header from 'components/common/Header'
 import Navigation from 'components/common/Navigation'
 import Image from 'components/common/Image'
+import RouterLink from 'components/common/Link'
 
 import profileData from '__mocks__/profile'
 import feedsData from '__mocks__/feeds'
@@ -113,6 +114,19 @@ function Profile({ match }) {
           >
             Follow
           </Button>
+        )}
+
+        {match.path === '/profile' && (
+          <RouterLink to="/profile/edit">
+            <Button
+              width="100%"
+              borderRadius={4}
+              justifyContent="center"
+              marginTop={16}
+            >
+              Edit Profile
+            </Button>
+          </RouterLink>
         )}
       </Pane>
 

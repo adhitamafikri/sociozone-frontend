@@ -25,6 +25,11 @@ function Navigation() {
           <Icon icon="home" color="dimgray" />
         </Pane>
       </Link>
+      <Link to="/upload">
+        <Pane>
+          <Icon icon="add" color="dimgray" />
+        </Pane>
+      </Link>
       <Link to="/search">
         <Pane>
           <Icon icon="search" color="dimgray" />
