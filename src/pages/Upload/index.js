@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Pane, Button, Text, TextInput } from 'evergreen-ui'
+import { Pane, Button, Text, TextInput, toaster } from 'evergreen-ui'
 
 import Layout from 'components/common/Layout'
 import Header from 'components/common/Header'
@@ -42,15 +42,16 @@ function Upload() {
 
   const setImagePreviews = (e) => {
     if (e.target.files.length > 3) {
-      alert('Cannot upload more than 3 images plz')
       setErrors({ ...errors, images: true })
+      toaster.danger('Cannot upload more than 3 images in a post')
     } else {
       if (postObject.images.length + e.target.files.length > 3) {
-        alert('Cannot upload more than 3 images in a post')
         setErrors({ ...errors, images: true })
+        toaster.danger('Cannot upload more than 3 images in a post')
       }
       else if (postObject.images.length === 3) {
-        alert('already 3 images')
+        setErrors({ ...errors, images: true })
+        toaster.danger('There are already 3 images')
       } else {
         const files = e.target.files
         for(let i = 0; i < files.length; i++) {
@@ -64,8 +65,8 @@ function Upload() {
           }
           reader.readAsDataURL(e.target.files[i])
         }
+        setErrors({ ...errors, images: false })
       }
-      setErrors({ ...errors, images: false })
     }
   }
 
@@ -78,8 +79,8 @@ function Upload() {
   }
 
   const uploadPost = () => {
-    if (errors.images || errors.caption) alert('Fix the error man wtf')
-    else alert('Submitted!')
+    if (errors.images || errors.caption) toaster.danger('Please fill all the fields')
+    else toaster.notify('Submitting form!')
   }
 
   console.log(postObject)
@@ -98,9 +99,7 @@ function Upload() {
         <StyledImageInput id="image-input" onChange={setImagePreviews} />
         <Pane>
           <label htmlFor="image-input">
-            <Button height={24}>
-              <Text>Choose Images...</Text>
-            </Button>
+            <Text>Choose Images...</Text>
           </label>
         </Pane>
         <Pane
@@ -125,6 +124,7 @@ function Upload() {
       />
 
       <Button
+        appearance="primary"
         onClick={uploadPost}
         width="100%"
         justifyContent="center"
