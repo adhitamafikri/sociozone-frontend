@@ -1,5 +1,4 @@
 import React from 'react'
-import { Pane } from 'evergreen-ui'
 import { useLocation } from 'react-router-dom'
 
 import Layout from 'components/common/Layout'

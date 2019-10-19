@@ -1,5 +1,4 @@
 import React from 'react'
-import { Pane } from 'evergreen-ui'
 
 import Layout from 'components/common/Layout'
 import Header from 'components/common/Header'
