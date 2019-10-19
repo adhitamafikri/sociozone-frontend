@@ -74,7 +74,7 @@ function Upload() {
     const caption = e.target.value
     setPostObject({ ...postObject, caption })
 
-    if (caption.length > 20) setErrors({ ...errors, caption: true })
+    if (caption.length > 50) setErrors({ ...errors, caption: true })
     else setErrors({ ...errors, caption: false })
   }
 
@@ -82,9 +82,6 @@ function Upload() {
     if (errors.images || errors.caption) toaster.danger('Please fill all the fields')
     else toaster.notify('Submitting form!')
   }
-
-  console.log(postObject)
-  console.log(errors)
 
   return (
     <Layout
@@ -119,7 +116,7 @@ function Upload() {
         width="100%"
         value={postObject.caption}
         onChange={handleCaption}
-        placeholder="Caption max.20 chars"
+        placeholder="Caption max.50 chars"
         marginBottom={16}
       />
 
