@@ -9,9 +9,9 @@ import PostCard from 'components/PostCard'
 import timelineData from '__mocks__/timeline'
 
 function renderTimeline() {
-  return timelineData.map((post) => (
+  return timelineData.map((post, idx) => (
     <PostCard
-      key={post.id}
+      key={`${post.id}-${idx}`}
       user={post.user}
       photos={post.photos}
       content={post.content}
