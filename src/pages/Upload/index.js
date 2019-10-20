@@ -60,7 +60,12 @@ function Upload() {
             const newImage = {
               src: reader.result
             }
-            setPostObject({ ...postObject, images: [...postObject.images, newImage] })
+            const newPostObject = {
+              ...postObject,
+              images: [...postObject.images, newImage]
+            }
+            setPostObject(newPostObject)
+            console.log(postObject)
           }
           reader.readAsDataURL(files[i])
         }

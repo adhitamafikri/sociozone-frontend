@@ -6,6 +6,7 @@ import {
 import Layout from 'components/common/Layout'
 import Header from 'components/common/Header'
 import Navigation from 'components/common/Navigation'
+import Link from 'components/common/Link'
 
 import searchResult from '__mocks__/search-result'
 
@@ -14,9 +15,11 @@ function Result({ keyword }) {
     const result = searchResult.filter((res) => res.username.toLowerCase().includes(keyword.toLowerCase()))
 
     return result.map((res) => (
-      <Pane key={res.id} width="100%" paddingTop={4} paddingBottom={4}>
-        <Text fontWeight={500}>{`@${res.username}`}</Text>
-      </Pane>
+      <Link key={res.id} to={`/user/${res.id}`}>
+        <Pane width="100%" paddingTop={4} paddingBottom={4}>
+          <Text fontWeight={500}>{`@${res.username}`}</Text>
+        </Pane>
+      </Link>
     ))
   }
   return null
